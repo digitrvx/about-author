@@ -119,6 +119,29 @@ footer {
     font-size:24px;
   }
 }
+
+.post {
+  border-bottom:1px solid #eee;
+  padding:15px 0;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.post:hover {
+  opacity:0.7;
+}
+
+.post h3 {
+  margin:0;
+  font-size:18px;
+}
+
+.post p {
+  margin:5px 0 0;
+  color:#666;
+  font-size:14px;
+}
+  
 </style>
 </head>
 
@@ -196,6 +219,27 @@ footer {
 
 </section>
 
+<!-- Latest Posts -->
+<section id="posts">
+  <h2>บทความล่าสุด</h2>
+
+  <div class="post" onclick="openPost('#')">
+    <h3>5 ข้อผิดพลาดของเทรดเดอร์มือใหม่</h3>
+    <p>เรียนรู้ข้อผิดพลาดที่พบบ่อย และวิธีหลีกเลี่ยงเพื่อความอยู่รอดในตลาด</p>
+  </div>
+
+  <div class="post" onclick="openPost('#')">
+    <h3>Risk Management คืออะไร และสำคัญแค่ไหน</h3>
+    <p>เข้าใจพื้นฐานการบริหารความเสี่ยงที่เทรดเดอร์ทุกคนต้องรู้</p>
+  </div>
+
+  <div class="post" onclick="openPost('#')">
+    <h3>จิตวิทยาการเทรด: คุมอารมณ์ให้ได้ กำไรจะตามมา</h3>
+    <p>วิธีควบคุมอารมณ์และพัฒนาวินัยในการเทรด</p>
+  </div>
+
+</section>
+
 <!-- Contact -->
 <section id="contact">
   <h2>ติดต่อ / ติดตาม</h2>
@@ -215,6 +259,10 @@ function scrollToSection(id){
 
 function toggle(el){
   el.classList.toggle("active");
+}
+
+function openPost(url){
+  window.location.href = url;
 }
 </script>
 
