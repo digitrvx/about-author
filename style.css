@@ -1,0 +1,193 @@
+/* --- Core Styles (Brutalist Essentials) --- */
+:root {
+    --bg-color: #f0f0f0; /* เทาอ่อน */
+    --text-color: #000000; /* ดำสนิท */
+    --accent-color: #ff0000; /* แดงสด (Optional สำหรับเล่นสี) */
+    --main-font: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Swiss Font Family */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.1; /* Line height แคบลง */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+/* --- Navigation --- */
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    z-index: 1000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: rgba(240, 240, 240, 0.9); /* แบบโปร่งใส */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Titles & Typography --- */
+h1 {
+    font-size: 10vw; /* ขนาดตามพื้นที่หน้าจอ */
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 150px; /* เพื่อหลบ Nav */
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    margin: 40px 0;
+    max-width: 600px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 20px 40px;
+    border: 3px solid var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* --- About Section (Asymmetric Grid) --- */
+.grids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.grid-right p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+/* --- Work Section (Grid Layout) --- */
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.work-item {
+    overflow: hidden;
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.work-item:hover img {
+    transform: scale(1.05); /* เอฟเฟกต์ซูมเมื่อ Hover */
+}
+
+.work-info {
+    padding: 20px 0;
+}
+
+.work-info h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 150px 0;
+}
+
+.footer-title {
+    color: var(--bg-color);
+    font-size: 12vw;
+}
+
+.contact-links {
+    display: flex;
+    gap: 40px;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.contact-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Responsive Layout (Mobile) --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 15vw;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .grids, .work-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
